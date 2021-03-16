@@ -1,0 +1,14 @@
+<div>
+    <h4>Search for country Name:</h4>
+    <input type="text" #country (keyup)="search(country.value)">
+</div>
+
+<hr>
+<div *ngIf="results.length > 0">
+    <ul>
+        <li *ngFor="let x of results">
+            {{x.name}}
+        </li>
+    </ul>
+
+</div>
