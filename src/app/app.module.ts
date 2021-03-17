@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PromisesComponent } from './promises/promises.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PromisesComponent
+    PromisesComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
