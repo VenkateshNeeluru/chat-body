@@ -12,22 +12,22 @@
         <!-- Media header -->
         <div class="hdr_section row-spb">
             <ul class="row-vrt-c">
-                <li>
+                <li [ngClass]="{'active': activeTabId === 1}">
                     <img src="../../assets/website.svg" alt="website" style="height: 20px;width: 20px;">
-                    <div class="count_text row-vrt-c">
+                    <div class="count_text row-vrt-c" (click)="changeTab(1, $event)">
                         <p>Website</p>
                         <span>2</span>
                     </div>
                 </li>
-                <li>
+                <li [ngClass]="{'active': activeTabId === 2}">
                     <img src="../../assets/whatsapp.svg" alt="whatsapp">
-                    <div class="count_text row-vrt-c">
+                    <div class="count_text row-vrt-c" (click)="changeTab(2, $event)">
                         <p>Whatsapp</p>
                     </div>
                 </li>
-                <li>
+                <li [ngClass]="{'active': activeTabId === 3}">
                     <img src="../../assets/Messanger.svg" alt="Messanger">
-                    <div class="count_text row-vrt-c">
+                    <div class="count_text row-vrt-c" (click)="changeTab(3, $event)">
                         <p>Messenger</p>
                         <span>4</span>
                     </div>

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatWindowComponent implements OnInit {
   isshowChatWindow: boolean;
+  activeTabId = 2;
 
   userlist = [
     {
@@ -58,6 +59,20 @@ export class ChatWindowComponent implements OnInit {
 
   closeButton(): void {
     this.isshowChatWindow = false;
+  }
+
+  changeTab(id, event?) {
+    this.activeTabId = id;
+    if (window.innerWidth < 500) {
+      const scrollEle = document.querySelector('.hdr_section');
+      if (id === 1) {
+        scrollEle.scrollLeft = 0;
+      } else if (id === 2) {
+        scrollEle.scrollLeft = scrollEle.scrollWidth;
+      } else if (id === 3) {
+        scrollEle.scrollLeft = scrollEle.scrollWidth;
+      }
+    }
   }
 
 }
