@@ -8,100 +8,104 @@
 
 
     <!-- chat box view -->
-    <div class="chat_view_container" *ngIf="isshowChatWindow">
-        <!-- Media header -->
-        <div class="hdr_section row-spb">
-            <ul class="row-vrt-c">
-                <li [ngClass]="{'active': activeTabId === 1}">
-                    <img src="../../assets/website.svg" alt="website" style="height: 20px;width: 20px;">
-                    <div class="count_text row-vrt-c" (click)="changeTab(1, $event)">
-                        <p>Website</p>
-                        <span>2</span>
-                    </div>
-                </li>
-                <li [ngClass]="{'active': activeTabId === 2}">
-                    <img src="../../assets/whatsapp.svg" alt="whatsapp">
-                    <div class="count_text row-vrt-c" (click)="changeTab(2, $event)">
-                        <p>Whatsapp</p>
-                    </div>
-                </li>
-                <li [ngClass]="{'active': activeTabId === 3}">
-                    <img src="../../assets/Messanger.svg" alt="Messanger">
-                    <div class="count_text row-vrt-c" (click)="changeTab(3, $event)">
-                        <p>Messenger</p>
-                        <span>4</span>
-                    </div>
-                </li>
-            </ul>
-            <div class="close_btn">
-                <button (click)="closeButton()">
-                    <img src="../../assets/close-btn.svg" alt="close-btn" style="width: 10px;height: 10px;">
-                </button>
-            </div>
-        </div>
-        <!-- Users List -->
-        <div class="user_list_container">
-            <div class="hdr_section">
-                <ul class="row-b user_scroll customScrollBarHar">
-                    <li class="row-vrt-c user_list" *ngFor="let user of userlist">
-                        <img src="../../assets/{{user.img}}" alt="">
+    <div class="row-b">
+        <div class="chat_view_container" *ngIf="isshowChatWindow">
+            <!-- Media header -->
+            <div class="hdr_section row-spb">
+                <ul class="row-vrt-c">
+                    <li [ngClass]="{'active': activeTabId === 1}">
+                        <img src="../../assets/website.svg" alt="website" style="height: 20px;width: 20px;">
+                        <div class="count_text row-vrt-c" (click)="changeTab(1, $event)">
+                            <p>Website</p>
+                            <span>2</span>
+                        </div>
+                    </li>
+                    <li [ngClass]="{'active': activeTabId === 2}">
+                        <img src="../../assets/whatsapp.svg" alt="whatsapp">
+                        <div class="count_text row-vrt-c" (click)="changeTab(2, $event)">
+                            <p>Whatsapp</p>
+                        </div>
+                    </li>
+                    <li [ngClass]="{'active': activeTabId === 3}">
+                        <img src="../../assets/Messanger.svg" alt="Messanger">
+                        <div class="count_text row-vrt-c" (click)="changeTab(3, $event)">
+                            <p>Messenger</p>
+                            <span>4</span>
+                        </div>
                     </li>
                 </ul>
-                <div class="chevron_right">
-                    <img src="../../assets/chevron-right.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- profile message  -->
-        <div class="display_msg_container">
-            <div class="hdr_section">
-                <div class="row-vrt-c pl10">
-                    <div class="user_list">
-                        <img src="../../assets/user3.png" alt="user3">
-                    </div>
-                    <div class="display_text">
-                        <p>Angelina Gadne message on State Bank of India</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Chat body view -->
-        <div class="chat_bdy_container">
-            <div class="chat_msg_view">
-                <div class="row-b msg_pdng">
-                    <div class="row-b">
-                        <div class="profile_icon">
-                            <img src="../../assets/user3.png" alt="">
-                        </div> 
-                        <div class="left_msg_text">
-                            <span>Hello are you there!</span> 
-                        </div>
-                    </div>
-                    <div class="row-b right_align">
-                        <div class="row-b right_msg_text">
-                            <span>Hello How can we help you...</span> 
-                        </div>
-                        <p class="time_stamp">10:27AM</p>
-                    </div>
-                </div>
-            </div>
-            <!-- chat footer -->
-            <div class="chat_ftr">
-                <div class="chat_pdng">
-                    <div class="row-spb input_bdr">
-                        <div class="row-vrt-c pl10 input_width">
-                            <span class="row-b">
-                                <img src="../../assets/sentiment_satisfied_alt.svg" alt="sentiment_satisfied_alt">
-                            </span>
-                            <input type="text" placeholder="write your message">
-                        </div>
-                        <div class="row-b">
-                            <img src="../../assets/attach_file.svg" alt="attach_file">
-                        </div>
-                    </div>
-                    <button>
-                        <img src="../../assets/send.svg" alt="send.svg">
+                <div class="close_btn">
+                    <button (click)="closeButton()">
+                        <img src="../../assets/close-btn.svg" alt="close-btn" style="width: 10px;height: 10px;">
                     </button>
+                </div>
+            </div>
+            <!-- Users List -->
+            <div class="user_list_container">
+                <div class="hdr_section">
+                    <ul class="row-b user_scroll customScrollBarHar">
+                        <li class="row-vrt-c user_list" *ngFor="let user of userlist">
+                            <img src="../../assets/{{user.img}}" alt="">
+                        </li>
+                    </ul>
+                    <div class="chevron_right">
+                        <img src="../../assets/chevron-right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- profile message  -->
+            <div class="display_msg_container">
+                <div class="hdr_section">
+                    <div class="row-vrt-c pl10">
+                        <div class="user_list">
+                            <img src="../../assets/user3.png" alt="user3">
+                        </div>
+                        <div class="display_text">
+                            <p>Angelina Gadne message on State Bank of India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat body view -->
+            <div>
+                <div class="chat_bdy_container">
+                    <div class="chat_msg_view">
+                        <div class="row-b msg_pdng">
+                            <div class="row-b">
+                                <div class="profile_icon">
+                                    <img src="../../assets/user3.png" alt="">
+                                </div> 
+                                <div class="left_msg_text">
+                                    <span>Hello are you there!</span> 
+                                </div>
+                            </div>
+                            <div class="right_align">
+                                <div class="right_msg_text">
+                                    <span>Hello How can we help you...</span> 
+                                </div>
+                                <p class="time_stamp">10:27AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- chat footer -->
+                    <div class="chat_ftr">
+                        <div class="chat_pdng">
+                            <div class="row-spb input_bdr">
+                                <div class="row-vrt-c pl10 input_width">
+                                    <span class="row-b">
+                                        <img src="../../assets/sentiment_satisfied_alt.svg" alt="sentiment_satisfied_alt">
+                                    </span>
+                                    <input type="text" placeholder="write your message">
+                                </div>
+                                <div class="row-b">
+                                    <img src="../../assets/attach_file.svg" alt="attach_file">
+                                </div>
+                            </div>
+                            <button>
+                                <img src="../../assets/send.svg" alt="send.svg">
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
