@@ -1,7 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-// @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+html {
+  margin: 0;
+}
 
 body {
-    font-family: 'Play', sans-serif;
+  background-color: #f7f7f7;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.customScrollBarHar::-webkit-scrollbar {
+  height: 5px;
+  width: 12px;
+}
+
+.customScrollBarHar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.row-b {
+  display: flex;
+}
+
+.row-vrt-c {
+  display: flex;
+  align-items: center;
+}
+
+.row-spb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
