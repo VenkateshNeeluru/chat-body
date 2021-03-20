@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChatBodyComponent } from './chat-body.component';
 
 describe('ChatBodyComponent', () => {
