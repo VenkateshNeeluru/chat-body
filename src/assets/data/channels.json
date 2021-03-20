@@ -1,0 +1,19 @@
+{
+    "channels": [
+        {
+            "name": "Website",
+            "icon": "website.svg",
+            "unReadCount": 2
+        },
+        {
+            "name": "WhatsApp",
+            "icon": "whatsapp.svg",
+            "unReadCount": 0
+        },
+        {
+            "name": "Messenger",
+            "icon": "Messanger.svg",
+            "unReadCount": 2
+        }
+    ]
+}

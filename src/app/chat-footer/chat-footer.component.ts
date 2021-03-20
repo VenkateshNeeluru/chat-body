@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-chat-footer',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-footer.component.scss']
 })
 export class ChatFooterComponent implements OnInit {
-
-  constructor() { }
+  inputValue: string = '';
+  constructor(private httpService: HttpService) { }
 
   ngOnInit(): void {
+  }
+
+  sendMessage() {
+    if (this.inputValue.trim()) {
+      this.httpService.addMessage.next({
+        msg: this.inputValue,
+        from: "2",
+        pic: "user1.png"
+      });
+      console.log(this.inputValue);
+      this.inputValue = '';
+    }
   }
 
 }

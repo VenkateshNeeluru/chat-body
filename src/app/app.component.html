@@ -8,5 +8,5 @@
 <!-- Chat view -->
 
 <div *ngIf="isshowChatWindow">
-    <app-chat-window></app-chat-window>
+    <app-chat-window (closeChat)="isshowChatWindow = false"></app-chat-window>
 </div>

@@ -1,0 +1,29 @@
+{
+    "messages": [
+        {
+            "msg": "Hello are you there!",
+            "from": "1",
+            "pic": "user3.png"
+        },
+        {
+            "msg": "Hello How can we help you...",
+            "from": "2",
+            "pic": "user1.png"
+        },
+        {
+            "msg": "Hello How can we help you...",
+            "from": "2",
+            "pic": "user1.png"
+        },
+        {
+            "msg": "Hello How can we help you...",
+            "from": "2",
+            "pic": "user1.png"
+        },
+        {
+            "msg": "Hello How can we help you...",
+            "from": "2",
+            "pic": "user1.png"
+        }
+    ]
+}

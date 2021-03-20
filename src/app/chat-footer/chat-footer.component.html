@@ -5,13 +5,13 @@
                 <span class="row-b">
                     <img src="../../assets/sentiment_satisfied_alt.svg" alt="sentiment_satisfied_alt">
                 </span>
-                <input type="text" placeholder="write your message">
+                <input [(ngModel)]="inputValue" type="text" placeholder="write your message">
             </div>
             <div class="row-b">
                 <img src="../../assets/attach_file.svg" alt="attach_file">
             </div>
         </div>
-        <button>
+        <button (click)="sendMessage()">
             <img src="../../assets/send.svg" alt="send.svg">
         </button>
     </div>

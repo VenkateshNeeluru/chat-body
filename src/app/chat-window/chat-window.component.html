@@ -5,14 +5,15 @@
             <!-- Media channel header -->
             <div class="hdr_section row-spb">
                 <ul class="row-vrt-c">
-                    <li [ngClass]="{'active': activeTabId === 1}">
-                        <img src="../../assets/website.svg" alt="website" style="height: 20px;width: 20px;">
-                        <div class="count_text row-vrt-c" (click)="changeTab(1, $event)">
-                            <p>Website</p>
-                            <span>2</span>
+                    <li *ngFor="let item of channelsList" [ngClass]="{'active': activeTabId === item?.name}"
+                        (click)="changeTab(item.name)">
+                        <img src="assets/{{item?.icon}}" [alt]="item?.name" style="height: 20px;width: 20px;">
+                        <div class="count_text row-vrt-c">
+                            <p>{{item?.name}}</p>
+                            <span *ngIf="item?.unReadCount">{{item?.unReadCount}}</span>
                         </div>
                     </li>
-                    <li [ngClass]="{'active': activeTabId === 2}">
+                    <!-- <li [ngClass]="{'active': activeTabId === 2}">
                         <img src="../../assets/whatsapp.svg" alt="whatsapp">
                         <div class="count_text row-vrt-c" (click)="changeTab(2, $event)">
                             <p>Whatsapp</p>
@@ -24,10 +25,10 @@
                             <p>Messenger</p>
                             <span>4</span>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
                 <div class="close_btn">
-                    <button> <!--(click)="closeButton()"-->
+                    <button (click)="closeButton()">
                         <img src="../../assets/close-btn.svg" alt="close-btn" style="width: 10px;height: 10px;">
                     </button>
                 </div>
@@ -36,17 +37,17 @@
             <div class="user_list_container">
                 <div class="hdr_section">
                     <div class="user_scroll customScrollBarHar">
-                        <ul class="row-b" *ngIf="activeTabId === 1">
+                        <ul class="row-b" *ngIf="activeTabId === 'Website'">
                             <li class="row-vrt-c user_list" *ngFor="let user of webUserList">
                                 <img src="../../assets/{{user.img}}" alt="">
                             </li>
                         </ul>
-                        <ul class="row-b" *ngIf="activeTabId === 2">
+                        <ul class="row-b" *ngIf="activeTabId === 'WhatsApp'">
                             <li class="row-vrt-c user_list" *ngFor="let user of userList">
                                 <img src="../../assets/{{user.img}}" alt="">
                             </li>
                         </ul>
-                        <ul class="row-b" *ngIf="activeTabId === 3">
+                        <ul class="row-b" *ngIf="activeTabId === 'Messenger'">
                             <li class="row-vrt-c user_list" *ngFor="let user of msgnrUserList">
                                 <img src="../../assets/{{user.img}}" alt="">
                             </li>
