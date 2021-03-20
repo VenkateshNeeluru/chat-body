@@ -24,5 +24,4 @@ export class ChatFooterComponent implements OnInit {
       this.inputValue = '';
     }
   }
-
 }

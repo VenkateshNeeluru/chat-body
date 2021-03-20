@@ -20,7 +20,6 @@ export class ChatBodyComponent implements OnInit {
     this.httpService.addMessage.subscribe(res => {
       this.messages.push(res);
     });
-
   }
 
 }
