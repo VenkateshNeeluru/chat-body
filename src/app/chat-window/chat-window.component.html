@@ -10,7 +10,7 @@
     <!-- chat box view -->
     <div class="row-b">
         <div class="chat_view_container" *ngIf="isshowChatWindow">
-            <!-- Media header -->
+            <!-- Media channel header -->
             <div class="hdr_section row-spb">
                 <ul class="row-vrt-c">
                     <li [ngClass]="{'active': activeTabId === 1}">
@@ -43,13 +43,25 @@
             <!-- Users List -->
             <div class="user_list_container">
                 <div class="hdr_section">
-                    <ul class="row-b user_scroll customScrollBarHar">
-                        <li class="row-vrt-c user_list" *ngFor="let user of userlist">
-                            <img src="../../assets/{{user.img}}" alt="">
-                        </li>
-                    </ul>
-                    <div class="chevron_right">
-                        <img src="../../assets/chevron-right.svg" alt="">
+                    <div class="user_scroll customScrollBarHar">
+                        <ul class="row-b" *ngIf="activeTabId === 1">
+                            <li class="row-vrt-c user_list" *ngFor="let user of webUserList">
+                                <img src="../../assets/{{user.img}}" alt="">
+                            </li>
+                        </ul>
+                        <ul class="row-b" *ngIf="activeTabId === 2">
+                            <li class="row-vrt-c user_list" *ngFor="let user of userList">
+                                <img src="../../assets/{{user.img}}" alt="">
+                            </li>
+                        </ul>
+                        <ul class="row-b" *ngIf="activeTabId === 3">
+                            <li class="row-vrt-c user_list" *ngFor="let user of msgnrUserList">
+                                <img src="../../assets/{{user.img}}" alt="">
+                            </li>
+                        </ul>
+                    </div> <!-- || userList.length >=10 || msgnrUserList >=10-->
+                    <div class="chevron_right" *ngIf="userList.length >= 10">
+                        <img src="../../assets/chevron-right.svg" alt="chevron-right">
                     </div>
                 </div>
             </div>
@@ -70,7 +82,10 @@
             <div>
                 <div class="chat_bdy_container">
                     <div class="chat_msg_view">
-                        <div class="row-b msg_pdng">
+                        <div *ngIf="activeTabId === 1">
+                            <p>Website View</p>
+                        </div>
+                        <div *ngIf="activeTabId === 2" class="row-b msg_pdng">
                             <div class="row-b">
                                 <div class="profile_icon">
                                     <img src="../../assets/user3.png" alt="">
@@ -85,6 +100,9 @@
                                 </div>
                                 <p class="time_stamp">10:27AM</p>
                             </div>
+                        </div>
+                        <div *ngIf="activeTabId === 3">
+                            <p>Messenger View</p>
                         </div>
                     </div>
                     <!-- chat footer -->

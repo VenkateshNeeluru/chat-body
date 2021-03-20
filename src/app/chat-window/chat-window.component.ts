@@ -9,7 +9,19 @@ export class ChatWindowComponent implements OnInit {
   isshowChatWindow: boolean;
   activeTabId = 2;
 
-  userlist = [
+  webUserList = [
+    {
+      img: 'user1.png'
+    },
+    {
+      img: 'user2.png'
+    },
+    {
+      img: 'user3.png'
+    },
+  ];
+
+  userList = [
     {
       img: 'user1.png'
     },
@@ -48,6 +60,18 @@ export class ChatWindowComponent implements OnInit {
     },
   ];
 
+  msgnrUserList = [
+    {
+      img: 'user1.png'
+    },
+    {
+      img: 'user2.png'
+    },
+    {
+      img: 'user3.png'
+    },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -61,7 +85,7 @@ export class ChatWindowComponent implements OnInit {
     this.isshowChatWindow = false;
   }
 
-  changeTab(id, event?) {
+  changeTab(id) {
     this.activeTabId = id;
     if (window.innerWidth < 500) {
       const scrollEle = document.querySelector('.hdr_section');
