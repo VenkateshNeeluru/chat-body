@@ -1,0 +1,42 @@
+.input_bdr {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.input_width {
+    width: 100%;
+}
+
+.chat_ftr {
+    width: 100%;
+    display: flex;
+
+    input {
+        height: 40px;
+        outline: none;
+        padding: 0 13px;
+        width: 100%;
+        border: none;
+    }
+
+    button {
+        background-color: #3467eb;
+        border-radius: 3px;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        height: 40px;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+}
+
+.chat_pdng {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+}

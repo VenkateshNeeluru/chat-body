@@ -1,16 +1,12 @@
 <!-- Chat Icon -->
-<!-- <div *ngIf="!isshowChatWindow" (click)="showChatWindow()">
+<div *ngIf="!isshowChatWindow" (click)="showChatWindow()">
     <div class="chat_icon">
         <img src="../assets/white-messenger.svg" alt="">
     </div>
-</div> -->
+</div>
 
 <!-- Chat view -->
 
-<!-- <div *ngIf="isshowChatWindow">
-    <app-chat-window></app-chat-window>
-</div> -->
-
-<div>
+<div *ngIf="isshowChatWindow">
     <app-chat-window></app-chat-window>
 </div>

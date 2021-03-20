@@ -1,15 +1,7 @@
 <div>
-    <!-- Chat Icon -->
-    <div *ngIf="!isshowChatWindow" (click)="showChatWindow()">
-        <div class="chat_icon">
-            <img src="../assets/white-messenger.svg" alt="">
-        </div>
-    </div>
-
-
     <!-- chat box view -->
     <div class="row-b">
-        <div class="chat_view_container" *ngIf="isshowChatWindow">
+        <div class="chat_view_container">
             <!-- Media channel header -->
             <div class="hdr_section row-spb">
                 <ul class="row-vrt-c">
@@ -35,7 +27,7 @@
                     </li>
                 </ul>
                 <div class="close_btn">
-                    <button (click)="closeButton()">
+                    <button> <!--(click)="closeButton()"-->
                         <img src="../../assets/close-btn.svg" alt="close-btn" style="width: 10px;height: 10px;">
                     </button>
                 </div>
@@ -81,49 +73,9 @@
             <!-- Chat body view -->
             <div>
                 <div class="chat_bdy_container">
-                    <div class="chat_msg_view">
-                        <div *ngIf="activeTabId === 1">
-                            <p>Website View</p>
-                        </div>
-                        <div *ngIf="activeTabId === 2" class="row-b msg_pdng">
-                            <div class="row-b">
-                                <div class="profile_icon">
-                                    <img src="../../assets/user3.png" alt="">
-                                </div> 
-                                <div class="left_msg_text">
-                                    <span>Hello are you there!</span> 
-                                </div>
-                            </div>
-                            <div class="right_align">
-                                <div class="right_msg_text">
-                                    <span>Hello How can we help you...</span> 
-                                </div>
-                                <p class="time_stamp">10:27AM</p>
-                            </div>
-                        </div>
-                        <div *ngIf="activeTabId === 3">
-                            <p>Messenger View</p>
-                        </div>
-                    </div>
+                    <app-chat-body></app-chat-body>
                     <!-- chat footer -->
-                    <div class="chat_ftr">
-                        <div class="chat_pdng">
-                            <div class="row-spb input_bdr">
-                                <div class="row-vrt-c pl10 input_width">
-                                    <span class="row-b">
-                                        <img src="../../assets/sentiment_satisfied_alt.svg" alt="sentiment_satisfied_alt">
-                                    </span>
-                                    <input type="text" placeholder="write your message">
-                                </div>
-                                <div class="row-b">
-                                    <img src="../../assets/attach_file.svg" alt="attach_file">
-                                </div>
-                            </div>
-                            <button>
-                                <img src="../../assets/send.svg" alt="send.svg">
-                            </button>
-                        </div>
-                    </div>
+                    <app-chat-footer></app-chat-footer>
                 </div>
             </div>
         </div>

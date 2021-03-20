@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newproject';
+  isshowChatWindow: boolean;
+
+  showChatWindow(): void {
+    this.isshowChatWindow = !this.isshowChatWindow;
+  }
 
 }
