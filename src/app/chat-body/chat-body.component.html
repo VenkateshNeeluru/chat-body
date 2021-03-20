@@ -1,10 +1,13 @@
 <div class="chat_msg_view">
     <div class="row-b msg_pdng">
         <div *ngFor="let message of messages" class="row-b {{message.from === '1' ? 'left-side' : 'right-side'}}">
-            <div class="profile_icon" *ngIf="message.from === '1'">
+            <div class="profile_icon" *ngIf="message.from === '1' || message.from === '2'">
                 <img src="assets/{{message.pic}}" alt="">
             </div>
-            <span>{{message?.msg}}</span>
+            <div class="pstn_relative row-b">
+                <span>{{message?.msg}}</span>
+                <p class="time_stamp">{{timeStamp | date:'mediumTime'}}</p>
+            </div>
         </div>
     </div>
 </div>

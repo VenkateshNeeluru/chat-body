@@ -44,21 +44,21 @@
 
       &.active {
         &::before {
-            content: "";
-            width: 85px;
-            height: 4px;
-            background-color: #3467eb;
-            position: absolute;
-            top: 7%;
-            border-radius: 8px;
+          content: "";
+          width: 85px;
+          height: 4px;
+          background-color: #3467eb;
+          position: absolute;
+          top: 7%;
+          border-radius: 8px;
         }
-    }
+      }
     }
   }
 }
 
 .pl10 {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 
@@ -93,36 +93,35 @@
 }
 
 .user_list {
-    img{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 .user_scroll {
-    display: flex;
-    overflow-y: auto;
+  display: flex;
+  overflow-y: auto;
 }
 
 .chevron_right {
-    padding-left: 20px;
-    padding-right: 10px;
-    cursor: pointer;
+  padding-left: 20px;
+  padding-right: 10px;
+  cursor: pointer;
 }
 
 .display_text {
-    p {
-        font-size: 14px;
-        font-weight: normal;
-        padding-left: 10px;
-    }
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 10px;
+  }
 }
 
 .chat_bdy_container {
-    display: flex;
-    height: calc(100% - 68px);
-    flex-direction: column;
+  display: flex;
+  height: calc(100% - 68px);
+  flex-direction: column;
 }
-

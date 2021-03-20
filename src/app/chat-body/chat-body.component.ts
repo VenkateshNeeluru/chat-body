@@ -8,6 +8,7 @@ import { HttpService } from '../http.service';
 })
 export class ChatBodyComponent implements OnInit {
   messages: any[] = [];
+  public timeStamp: Date = new Date();
   constructor(private httpService: HttpService) { }
 
   ngOnInit(): void {

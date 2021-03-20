@@ -13,19 +13,6 @@
                             <span *ngIf="item?.unReadCount">{{item?.unReadCount}}</span>
                         </div>
                     </li>
-                    <!-- <li [ngClass]="{'active': activeTabId === 2}">
-                        <img src="../../assets/whatsapp.svg" alt="whatsapp">
-                        <div class="count_text row-vrt-c" (click)="changeTab(2, $event)">
-                            <p>Whatsapp</p>
-                        </div>
-                    </li>
-                    <li [ngClass]="{'active': activeTabId === 3}">
-                        <img src="../../assets/Messanger.svg" alt="Messanger">
-                        <div class="count_text row-vrt-c" (click)="changeTab(3, $event)">
-                            <p>Messenger</p>
-                            <span>4</span>
-                        </div>
-                    </li> -->
                 </ul>
                 <div class="close_btn">
                     <button (click)="closeButton()">
@@ -52,7 +39,7 @@
                                 <img src="../../assets/{{user.img}}" alt="">
                             </li>
                         </ul>
-                    </div> <!-- || userList.length >=10 || msgnrUserList >=10-->
+                    </div>
                     <div class="chevron_right" *ngIf="userList.length >= 10">
                         <img src="../../assets/chevron-right.svg" alt="chevron-right">
                     </div>
